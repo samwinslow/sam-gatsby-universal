@@ -4,16 +4,25 @@
   "gallery": [{
     "title": "React Context",
     "copy": "For global styles.",
-    "image": "../images/gallery/react-context.jpg"
+    "image": "../images/gallery/react-context.jpg",
+    "link": "/blog/post-1/"
   },
   {
     "title": "Page Transitions",
     "copy": "Component-based for easy usage.",
-    "image": "../images/gallery/page-transitions.jpg"
+    "image": "../images/gallery/page-transitions.jpg",
+    "link": "/project/p1/"
+  },
+  {
+    "title": "Page Transitions",
+    "copy": "Component-based for easy usage.",
+    "image": "../images/gallery/page-transitions.jpg",
+    "link": "/project/p1"
   },
   {
     "title": "Intersection Observer",
     "copy": "Including a polyfill for Safari.",
-    "image": "../images/gallery/intersection-observer.jpg"
+    "image": "../images/gallery/intersection-observer.jpg",
+    "link": "/project/p1/"
   }]
 }
