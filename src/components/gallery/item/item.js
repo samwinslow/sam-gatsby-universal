@@ -4,9 +4,13 @@ import Img from 'gatsby-image';
 import GatsbyLink from 'gatsby-link';
 import { Title, Copy } from './item.css';
 
+const linkStyles = {
+  textDecoration: 'none'
+};
+
 const Item = ({ frontmatter }) => (
   <figure>
-    <GatsbyLink to={frontmatter.slug}>
+    <GatsbyLink to={frontmatter.slug} style={linkStyles}>
       <Img fluid={frontmatter.image.childImageSharp.fluid} alt={frontmatter.title} />
       <figcaption>
         <Title>{frontmatter.title}</Title>

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { accent } from 'constants/theme';
+import { baseFontSize, baseFontStack, monoFontStack, accentColor, baseColor, baseLineHeight, headFontStack } from './constants/theme';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -18,7 +19,6 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    
     font-family: inherit;
     vertical-align: baseline;
   }
@@ -30,14 +30,15 @@ export default createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%;
+    font-size: ${baseFontSize};
+    line-height: ${baseLineHeight};
   }
 
   body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    line-height: 1;
-    font-size: 1.6rem;
-    color: #000;
+    font-family: ${baseFontStack};
+    font-size: ${baseFontSize};
+    line-height: ${baseLineHeight};
+    color: ${baseColor};
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -48,12 +49,26 @@ export default createGlobalStyle`
     font-variant-numeric: proportional-nums;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${headFontStack};
+  }
+
   ol, ul {
     list-style: none;
   }
 
   blockquote, q {
     quotes: none;
+  }
+
+  blockquote {
+    font-size: 80%;
+    padding: 0.4rem 0 0.5rem 1.5rem;
+    border-left: 2px solid ${baseColor};
+  }
+
+  blockquote p {
+    margin: 0;
   }
 
   blockquote:before, blockquote:after,
@@ -63,12 +78,19 @@ export default createGlobalStyle`
   }
 
   table {
+    transition: opacity 0.2s ease;
     border-collapse: collapse;
     border-spacing: 0;
   }
 
   a {
-    color: ${accent};
+    color: ${accentColor};
+  }
+
+  a:hover {
+    color: ${accentColor};
+    opacity: 0.7;
+    text-decoration: none;
   }
 
   pre {
@@ -80,19 +102,15 @@ export default createGlobalStyle`
     line-height: 1.45;
     border-radius: 5px;
     color: ${accent};
-    border: 1px solid #ddd;
-    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    border: 1px solid ${accent};
+    font-family: ${monoFontStack};
   }
 
   video {
     max-width: 100%;
   }
 
-  p {
-    margin-bottom: 2rem;
-  }
-
-  .gatsby-resp-image-wrapper {
-    
+  blockquote, p {
+    margin-bottom: 1rem;
   }
 `;

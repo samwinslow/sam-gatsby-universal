@@ -33,12 +33,23 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         root: __dirname,
+        plugins: [
+          // set up config for embedded images in mdx files
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 700,
+              quality: 100,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
         gatsbyRemarkPlugins: [
           // set up config for embedded images in mdx files
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 500,
+              maxWidth: 700,
               quality: 100,
               linkImagesToOriginal: false,
             },

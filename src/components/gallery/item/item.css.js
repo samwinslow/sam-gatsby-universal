@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
-export const Title = styled.span`
-  display: block;
-  font-size: 2rem;
+export const Title = styled.h2`
+  font-size: 1.5rem;
+  line-height: 1;
   font-weight: 500;
-  margin: 2rem 2rem 1rem;
+  margin: 1rem 0;
   text-decoration-style: none;
 `;
 

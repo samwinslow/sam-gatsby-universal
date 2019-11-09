@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
-export const Text = styled.span`
+export const Text = styled.h1`
   display: block;
+  margin: 0 0 2rem 0;
+  
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
