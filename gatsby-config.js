@@ -29,5 +29,22 @@ module.exports = {
         },
       },
     },
-  ],
-};
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        root: __dirname,
+        gatsbyRemarkPlugins: [
+          // set up config for embedded images in mdx files
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 500,
+              quality: 100,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+  ]
+}

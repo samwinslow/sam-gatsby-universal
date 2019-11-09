@@ -4,23 +4,19 @@ import Img from 'gatsby-image';
 import GatsbyLink from 'gatsby-link';
 import { Title, Copy } from './item.css';
 
-const Item = ({ title, copy, image, link }) => (
+const Item = ({ frontmatter }) => (
   <figure>
-    <GatsbyLink to="/blog/post-1/">
-      <Img fluid={image ? image.childImageSharp.fluid : {}} alt={title} />
+    <GatsbyLink to={frontmatter.slug}>
+      <Img fluid={frontmatter.image.childImageSharp.fluid} alt={frontmatter.title} />
       <figcaption>
-        <Title>{title}</Title>
-        <Copy>{copy}</Copy>
+        <Title>{frontmatter.title}</Title>
       </figcaption>
     </GatsbyLink>
   </figure>
 );
 
 Item.propTypes = {
-  title: PropTypes.string,
-  copy: PropTypes.string,
-  image: PropTypes.object.isRequired,
-  link: PropTypes.string
+  frontmatter: PropTypes.object.isRequired
 };
 
 export default Item;

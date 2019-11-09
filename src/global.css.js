@@ -18,8 +18,8 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
+    
+    font-family: inherit;
     vertical-align: baseline;
   }
 
@@ -90,5 +90,9 @@ export default createGlobalStyle`
 
   p {
     margin-bottom: 2rem;
+  }
+
+  .gatsby-resp-image-wrapper {
+    
   }
 `;
