@@ -10,9 +10,11 @@ import { graphql } from 'gatsby';
 
 const Index = ({ data }) => (
   <Layout>
-    <Box>
-      <Title as="h2" size="large">
-        IndexTitle
+    <Box fluid>
+      <Title as="h2">
+      I have lots of ideas,<br />
+      I send well-written emails,<br />
+      and I make things happen.
       </Title>
       <p>Go placidly amid the noise and haste, and remember what peace there may be in silence. As far as possible without surrender be on good terms with all persons. Speak your truth quietly and clearly; and listen to others, even the dull and the ignorant; they too have their story.</p>
       <Gallery data={data} />
@@ -34,8 +36,9 @@ export const query = graphql`
           id
           frontmatter {
             slug
-            date
+            date(formatString: "MMM. D, YYYY")
             title
+            copy
             image {
               publicURL
               childImageSharp {

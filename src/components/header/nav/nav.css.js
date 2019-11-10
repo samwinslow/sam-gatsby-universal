@@ -5,13 +5,12 @@ export const Container = styled.nav`
     display: flex;
     list-style: none;
     padding: 0;
-
+    margin: 0;
     li {
-      text-transform: uppercase;
       font-size: 1rem;
 
       & + li {
-        margin-left: 2rem;
+        margin-left: 1rem;
       }
     }
   }

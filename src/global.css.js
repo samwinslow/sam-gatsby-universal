@@ -53,8 +53,9 @@ export default createGlobalStyle`
     font-family: ${headFontStack};
   }
 
-  ol, ul {
-    list-style: none;
+  ol li, ul li {
+    margin: 0.4rem 0 0.5rem 1rem;
+    padding-left: 0.5rem;
   }
 
   blockquote, q {
@@ -110,7 +111,7 @@ export default createGlobalStyle`
     max-width: 100%;
   }
 
-  blockquote, p {
+  blockquote, p, ol, ul {
     margin-bottom: 1rem;
   }
 `;

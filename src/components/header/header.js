@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import posed from 'react-pose';
 import { Container } from './header.css';
 import SiteTitle from 'components/sitetitle';
@@ -25,10 +24,7 @@ const AnimatedContainer = posed.div({
 const Header = ({ title }) => (
   <AnimatedContainer>
     <Container>
-      <Link to="/">
-        <SiteTitle as="h1">{title}</SiteTitle>
-      </Link>
-
+      <SiteTitle>{title}</SiteTitle>
       <Nav />
     </Container>
   </AnimatedContainer>

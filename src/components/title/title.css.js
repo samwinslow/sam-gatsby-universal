@@ -4,24 +4,9 @@ import MEDIA from 'helpers/mediaTemplates';
 export const Text = styled.h1`
   display: block;
   margin: 0 0 2rem 0;
-  
-  font-weight: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
-        return '400';
-      default:
-        return '500';
-    }
-  }};
-  font-size: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
-        return '3.2rem';
-      default:
-        return '2rem';
-    }
-  }};
-  line-height: 1.2;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1.1;
 
   ${MEDIA.TABLET`
     font-size: ${({ size }) => () => {

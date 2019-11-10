@@ -1,15 +1,27 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Container } from './nav.css';
+import { baseColor, headFontStack } from '../../../constants/theme';
+
+const linkStyle = {
+  color: baseColor,
+  fontFamily: headFontStack,
+};
 
 const Nav = () => (
   <Container>
     <ul>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about" style={ linkStyle }>Work</Link>
       </li>
       <li>
-        <a href="https://github.com/fabe/gatsby-universal">GitHub</a>
+        <Link to="/about" style={ linkStyle }>Blog</Link>
+      </li>
+      <li>
+        <Link to="/about" style={ linkStyle }>About</Link>
+      </li>
+      <li>
+        <Link to="/about" style={ linkStyle }>Play</Link>
       </li>
     </ul>
   </Container>

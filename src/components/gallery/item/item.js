@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import GatsbyLink from 'gatsby-link';
-import { Title, Copy } from './item.css';
+import { Date, Title, Copy } from './item.css';
 
 const linkStyles = {
   textDecoration: 'none'
@@ -14,6 +14,8 @@ const Item = ({ frontmatter }) => (
       <Img fluid={frontmatter.image.childImageSharp.fluid} alt={frontmatter.title} />
       <figcaption>
         <Title>{frontmatter.title}</Title>
+        <Copy>{frontmatter.copy}</Copy>
+        <Date>{frontmatter.date}</Date>
       </figcaption>
     </GatsbyLink>
   </figure>
