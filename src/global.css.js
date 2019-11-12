@@ -39,7 +39,7 @@ export default createGlobalStyle`
     font-size: ${baseFontSize};
     line-height: ${baseLineHeight};
     color: ${baseColor};
-    background-color: #fff;
+    background: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -51,6 +51,11 @@ export default createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${headFontStack};
+  }
+
+  h2 {
+    margin: 2.5rem 0 0.5rem 0;
+    line-height: 1.1;
   }
 
   ol li, ul li {
@@ -66,10 +71,9 @@ export default createGlobalStyle`
     font-size: 80%;
     padding: 0.4rem 0 0.5rem 1.5rem;
     border-left: 2px solid ${baseColor};
-  }
-
-  blockquote p {
-    margin: 0;
+    p {
+      margin: 0;
+    }
   }
 
   blockquote:before, blockquote:after,
@@ -78,10 +82,30 @@ export default createGlobalStyle`
     content: none;
   }
 
+  blockquote, p, ol, ul, table {
+    margin-bottom: 1rem;
+  }
+
   table {
     transition: opacity 0.2s ease;
     border-collapse: collapse;
     border-spacing: 0;
+    font-size: 80%;
+    th, td {
+      text-align: left;
+      padding: 0.25rem 1rem;
+    }
+    th {
+      font-size: 105%;
+      font-family: ${headFontStack};
+      border-bottom: 2px solid ${baseColor};
+    }
+  }
+
+  hr {
+    margin: 2.5rem 0;
+    border: 1px solid ${baseColor};
+    opacity: 0.1;
   }
 
   a {
@@ -111,7 +135,4 @@ export default createGlobalStyle`
     max-width: 100%;
   }
 
-  blockquote, p, ol, ul {
-    margin-bottom: 1rem;
-  }
 `;
