@@ -8,10 +8,11 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
 
 const BlogPost = ({ data }) => {
-  const post = data.mdx
+  const post = data.mdx;
+  const isWork = post.frontmatter.slug.startsWith('work')
   return (
     <Layout>
-      <Box>
+      <Box fullwidth={isWork}>
         <PostDate>{post.frontmatter.date}</PostDate>
         <Title as="h2" size="large">{post.frontmatter.title}</Title>
         <MDXRenderer>{post.body}</MDXRenderer>
@@ -29,6 +30,7 @@ export const query = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       body
       frontmatter {
+        slug
         date(formatString: "MMM. D, YYYY")
         title
         copy

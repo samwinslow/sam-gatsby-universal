@@ -11,3 +11,8 @@ export const ContainerFluid = styled.div`
   max-width: 1170px;
   margin: 0 auto;
 `;
+
+export const ContainerFullwidth = styled.div`
+  padding: 2rem;
+  margin: 0 auto;
+`;
