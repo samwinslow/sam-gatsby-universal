@@ -8,7 +8,7 @@ const linkStyles = {
   textDecoration: 'none',
 };
 
-const Item = ({ frontmatter }) => (
+const Item = ({ frontmatter, showDate = true }) => (
   <figure>
     <GatsbyLink to={frontmatter.slug} style={linkStyles}>
       <Img
@@ -18,7 +18,7 @@ const Item = ({ frontmatter }) => (
       <figcaption>
         <Title>{frontmatter.title}</Title>
         <Copy>{frontmatter.copy}</Copy>
-        <Date>{frontmatter.date}</Date>
+        <Date>{showDate ? frontmatter.date : null}</Date>
       </figcaption>
     </GatsbyLink>
   </figure>

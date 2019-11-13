@@ -59,6 +59,15 @@ export default createGlobalStyle`
     line-height: 1.1;
   }
 
+  h3 {
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: ${baseLineHeight};
+    font-family: ${baseFontStack};
+    font-weight: 400;
+    font-style: italic;
+  }
+
   ol li, ul li {
     margin: 0.4rem 0 0.5rem 1rem;
     padding-left: 0.5rem;
