@@ -6,13 +6,14 @@ import Title from 'components/title';
 import Gallery from 'components/gallery';
 import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
+import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
 const tempImgStyleProps = { width: '300px', };
 const Index = ({ data }) => (
   <Layout>
     <Box fluid>
-      <img src="/prof-vested.jpg" alt="" style={tempImgStyleProps} />
+      <Img fluid={data.profileImage.childImageSharp.fluid} style={tempImgStyleProps} />
       <Title as="h2">
       I have lots of ideas,<br />
       I send well-written emails,<br />
@@ -57,7 +58,6 @@ export const query = graphql`
               childImageSharp {
                 fluid {
                   base64
-                  tracedSVG
                   aspectRatio
                   src
                   srcSet
@@ -72,6 +72,23 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    profileImage: file(relativePath: {eq: "images/prof-vested.jpg" }) {
+      childImageSharp {
+        fluid {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+          presentationWidth
+          presentationHeight
         }
       }
     }
