@@ -15,9 +15,9 @@ export const Date = styled.p`
 export const Title = styled.h2`
   color: ${baseColor};
   font-size: 1.5rem;
-  line-height: 1;
-  font-weight: 500;
-  margin: 2rem 0 0.5rem 0;
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem 0;
   text-decoration-style: none;
 `;
 

@@ -19,7 +19,6 @@ const Index = ({ data }) => (
       <b>I have lots of ideas,<br />
       I send well-written emails,<br />
       and I make things happen.<br /></b>
-      <b>Like <Link to="/work/baedeker-fall-2018">magazines</Link>, and <Link to="/work">education for the 21st century</Link>, and <Link to="/work">many other things</Link>.</b>
       </Title>
       <Gallery data={data} />
     </Box>
