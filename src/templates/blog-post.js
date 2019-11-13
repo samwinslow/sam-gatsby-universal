@@ -9,16 +9,18 @@ import { graphql } from 'gatsby';
 
 const BlogPost = ({ data }) => {
   const post = data.mdx;
-  const isWork = post.frontmatter.slug.startsWith('work')
+  const isWork = post.frontmatter.slug.startsWith('work');
   return (
     <Layout>
       <Box fullwidth={isWork}>
         <PostDate>{post.frontmatter.date}</PostDate>
-        <Title as="h2" size="large">{post.frontmatter.title}</Title>
+        <Title as="h2" size="large">
+          {post.frontmatter.title}
+        </Title>
         <MDXRenderer>{post.body}</MDXRenderer>
       </Box>
     </Layout>
-  )
+  );
 };
 
 BlogPost.propTypes = {
@@ -37,7 +39,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export default BlogPost;
-

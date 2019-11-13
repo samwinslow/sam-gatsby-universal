@@ -4,11 +4,11 @@ import { Container, ContainerFluid, ContainerFullwidth } from './box.css';
 
 const Box = ({ fluid, children, fullwidth }) => {
   if (fullwidth) {
-    return(<ContainerFullwidth>{children}</ContainerFullwidth>)
+    return <ContainerFullwidth>{children}</ContainerFullwidth>;
   } else if (fluid) {
-    return(<ContainerFluid>{children}</ContainerFluid>)
+    return <ContainerFluid>{children}</ContainerFluid>;
   } else {
-    return(<Container>{children}</Container>)
+    return <Container>{children}</Container>;
   }
 };
 

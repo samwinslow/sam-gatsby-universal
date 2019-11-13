@@ -6,14 +6,12 @@ import { baseColor } from '../../constants/theme';
 
 const linkStyleProps = {
   color: baseColor,
-}
+};
 
 const SiteTitle = ({ to, children }) => {
   return (
-    <Link to={ to ? to : "/" } style={ linkStyleProps }>
-      <Text>
-        {children}
-      </Text>
+    <Link to={to ? to : '/'} style={linkStyleProps}>
+      <Text>{children}</Text>
     </Link>
   );
 };

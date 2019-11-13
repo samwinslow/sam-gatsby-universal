@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-import { baseColor, baseFontStack, headFontStack } from '../../../constants/theme';
+import { baseColor, headFontStack } from '../../../constants/theme';
 
 export const Date = styled.p`
   color: ${baseColor};

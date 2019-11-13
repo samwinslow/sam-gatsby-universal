@@ -39,7 +39,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 700,
-              quality: 100,
+              quality: 85,
               linkImagesToOriginal: false,
             },
           },
@@ -50,7 +50,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 700,
-              quality: 100,
+              quality: 85,
               linkImagesToOriginal: false,
             },
           },

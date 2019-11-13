@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { accentColor } from '../../constants/theme';
 
 export const Container = styled.header`
   display: flex;

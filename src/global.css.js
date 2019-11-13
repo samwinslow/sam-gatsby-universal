@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import { accent } from 'constants/theme';
-import { baseFontSize, baseFontStack, monoFontStack, accentColor, baseColor, baseLineHeight, headFontStack } from './constants/theme';
+import { baseFontSize, baseFontStack, monoFontStack, accentColor, baseColor, baseLineHeight, headFontStack, baseFontURL } from './constants/theme';
 
 export default createGlobalStyle`
+  @import url(${baseFontURL});
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -126,8 +127,8 @@ export default createGlobalStyle`
     font-size: 85%;
     line-height: 1.45;
     border-radius: 5px;
-    color: ${accent};
-    border: 1px solid ${accent};
+    color: ${accentColor};
+    border: 1px solid ${accentColor};
     font-family: ${monoFontStack};
   }
 

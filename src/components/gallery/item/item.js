@@ -5,13 +5,16 @@ import GatsbyLink from 'gatsby-link';
 import { Date, Title, Copy } from './item.css';
 
 const linkStyles = {
-  textDecoration: 'none'
+  textDecoration: 'none',
 };
 
 const Item = ({ frontmatter }) => (
   <figure>
     <GatsbyLink to={frontmatter.slug} style={linkStyles}>
-      <Img fluid={frontmatter.image.childImageSharp.fluid} alt={frontmatter.title} />
+      <Img
+        fluid={frontmatter.image.childImageSharp.fluid}
+        alt={frontmatter.title}
+      />
       <figcaption>
         <Title>{frontmatter.title}</Title>
         <Copy>{frontmatter.copy}</Copy>
@@ -22,7 +25,7 @@ const Item = ({ frontmatter }) => (
 );
 
 Item.propTypes = {
-  frontmatter: PropTypes.object.isRequired
+  frontmatter: PropTypes.object.isRequired,
 };
 
 export default Item;

@@ -8,15 +8,17 @@ import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
 
+const tempImgStyleProps = { width: '300px', };
 const Index = ({ data }) => (
   <Layout>
     <Box fluid>
+      <img src="/prof-vested.jpg" alt="" style={tempImgStyleProps} />
       <Title as="h2">
       I have lots of ideas,<br />
       I send well-written emails,<br />
-      and I make things happen.
+      and I make things happen.<br />
+      <b>Like magazines, and education for the 21st century, and many other things</b>.
       </Title>
-      <p>Go placidly amid the noise and haste, and remember what peace there may be in silence. As far as possible without surrender be on good terms with all persons. Speak your truth quietly and clearly; and listen to others, even the dull and the ignorant; they too have their story.</p>
       <Gallery data={data} />
     </Box>
   </Layout>
@@ -35,6 +37,10 @@ export const query = graphql`
         frontmatter: {
           category: { eq: "blog" }
         }
+      }
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
       }
     ) {
       edges {

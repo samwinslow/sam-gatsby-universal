@@ -12,16 +12,24 @@ const Nav = () => (
   <Container>
     <ul>
       <li>
-        <Link to="/work" style={ linkStyle }>Work</Link>
+        <Link to="/work" style={linkStyle}>
+          Work
+        </Link>
       </li>
       <li>
-        <Link to="/blog" style={ linkStyle }>Blog</Link>
+        <Link to="/blog" style={linkStyle}>
+          Blog
+        </Link>
       </li>
       <li>
-        <Link to="/about" style={ linkStyle }>About</Link>
+        <Link to="/about" style={linkStyle}>
+          About
+        </Link>
       </li>
       <li>
-        <Link to="/play" style={ linkStyle }>Play</Link>
+        <Link to="/play" style={linkStyle}>
+          Play
+        </Link>
       </li>
     </ul>
   </Container>
