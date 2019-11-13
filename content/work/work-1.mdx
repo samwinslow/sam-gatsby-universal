@@ -7,6 +7,20 @@ copy: "Misgivings about a company that valued scale over customer experience: mi
 image: "3screens-675aa1d0-a7c2-4a5b-85ca-3d918de54466.png"
 ---
 
+import { ImageGrid } from '../../src/components/image-grid';
+const sourcePath = 'work';
+
 ## Work 1
 
 Lorem ipsum dolor sit amet
+
+<ImageGrid sourcePath={sourcePath} items={[
+  {
+    image: '78790015.jpg',
+    image: '78790018.jpg',
+  },
+  {
+    image: '78790019.jpg',
+    image: '78790024.jpg',
+  }
+]} />
