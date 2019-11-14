@@ -34,11 +34,6 @@ export default Index;
 export const query = graphql`
   query HomepageQuery {
     allMdx(
-      filter: {
-        frontmatter: {
-          category: { eq: "blog" }
-        }
-      }
       sort: {
         fields: [frontmatter___date]
         order: DESC
