@@ -13,10 +13,10 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Box fullwidth={isWork}>
-        <PostDate>{post.frontmatter.date}</PostDate>
         <Title as="h2" size="large">
           {post.frontmatter.title}
         </Title>
+        <PostDate>{post.frontmatter.date}</PostDate>
         <MDXRenderer>{post.body}</MDXRenderer>
       </Box>
     </Layout>

@@ -2,37 +2,55 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Container } from './nav.css';
 import { baseColor, headFontStack } from '../../../constants/theme';
+import PropTypes from 'prop-types';
 
 const linkStyle = {
   color: baseColor,
   fontFamily: headFontStack,
 };
+const activeLinkStyle = {
+  color: baseColor,
+  fontFamily: headFontStack,
+  fontWeight: '700',
+}
 
-const Nav = () => (
+const links = [
+  {
+    to: '/work',
+    title: 'Work',
+  },
+  {
+    to: '/blog',
+    title: 'Blog',
+  },
+  {
+    to: '/about',
+    title: 'About',
+  },
+  {
+    to: '/play',
+    title: 'Play',
+  },
+];
+
+const Nav = ({ active }) => (
   <Container>
     <ul>
-      <li>
-        <Link to="/work" style={linkStyle}>
-          Work
-        </Link>
-      </li>
-      <li>
-        <Link to="/blog" style={linkStyle}>
-          Blog
-        </Link>
-      </li>
-      <li>
-        <Link to="/about" style={linkStyle}>
-          About
-        </Link>
-      </li>
-      <li>
-        <Link to="/play" style={linkStyle}>
-          Play
-        </Link>
-      </li>
+      {links.map(link => (
+        <li key={link.to}>
+          <Link
+            to={link.to}
+            style={active == link.to ? activeLinkStyle : linkStyle}>
+              {link.title}
+          </Link>
+        </li>
+      ))}
     </ul>
   </Container>
 );
+
+Nav.propTypes = {
+  active: PropTypes.string,
+}
 
 export default Nav;

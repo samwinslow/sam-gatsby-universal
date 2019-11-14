@@ -10,7 +10,7 @@ import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
 const About = (/*{ data }*/) => (
-  <Layout>
+  <Layout active="/about">
     <Box>
       <Title as="h2">
       Me

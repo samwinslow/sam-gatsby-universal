@@ -9,7 +9,7 @@ import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
 
 const Play = ({ data }) => (
-  <Layout>
+  <Layout active="/play">
     <Box fluid>
       <Title as="h2">
       Play (static-ish)
@@ -34,6 +34,10 @@ export const query = graphql`
         frontmatter: {
           category: { eq: "" }
         }
+      }
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
       }
     ) {
       edges {

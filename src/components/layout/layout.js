@@ -6,11 +6,11 @@ import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 import Footer from '../footer/footer';
 
-const Layout = ({ data, children }) => (
+const Layout = ({ data, children, active }) => (
   <div>
     <GlobalStyle />
     <Head />
-    <Header title={data.site.siteMetadata.siteTitle} />
+    <Header title={data.site.siteMetadata.siteTitle} active={active} />
     {children}
     <Footer />
   </div>
@@ -19,6 +19,7 @@ const Layout = ({ data, children }) => (
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   data: PropTypes.object.isRequired,
+  active: PropTypes.string,
 };
 
 const LayoutWithQuery = props => (
@@ -38,6 +39,7 @@ const LayoutWithQuery = props => (
 
 LayoutWithQuery.propTypes = {
   children: PropTypes.node.isRequired,
+  active: PropTypes.string,
 };
 
 export default LayoutWithQuery;

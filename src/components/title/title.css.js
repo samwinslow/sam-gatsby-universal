@@ -10,7 +10,7 @@ export const Text = styled.h1`
       return '0 0 2rem 0';
     }
   }};
-  font-weight: 300;
+  font-weight: 700;
   font-size: 3rem;
   line-height: 1.1;
 
