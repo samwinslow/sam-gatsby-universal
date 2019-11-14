@@ -9,10 +9,13 @@ import { graphql } from 'gatsby';
 
 const BlogPost = ({ data }) => {
   const post = data.mdx;
-  const isWork = post.frontmatter.slug.startsWith('work');
+  const isFullwidth = 
+    post.frontmatter.slug.startsWith('work');
+  const isFluid = 
+    post.frontmatter.slug.startsWith('play');
   return (
     <Layout>
-      <Box fullwidth={isWork}>
+      <Box fullwidth={isFullwidth} fluid={isFluid}>
         <Title as="h2" size="large">
           {post.frontmatter.title}
         </Title>

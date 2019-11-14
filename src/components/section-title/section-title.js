@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 
 const SectionTitle = ({ children, as = 'h1', to = '/' }) => (
   <Title as={as} style={{
+      marginTop: '4rem',
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-between',

@@ -8,17 +8,17 @@ const linkStyles = {
   textDecoration: 'none',
 };
 
-const Item = ({ frontmatter, showDate = true }) => (
+const Item = ({ frontmatter, showDate = true, showCopy = true }) => (
   <figure>
     <GatsbyLink to={frontmatter.slug} style={linkStyles}>
       <Img
-        fluid={frontmatter.image.childImageSharp.fluid}
+        fluid={{...frontmatter.image.childImageSharp.fluid, aspectRatio: 1.4}}
         alt={frontmatter.title}
       />
       <figcaption>
         <Title>{frontmatter.title}</Title>
-        <Copy>{frontmatter.copy}</Copy>
-        <Date>{showDate ? frontmatter.date : null}</Date>
+        {showDate ? (<Date>{frontmatter.date}</Date>) : null}
+        {showCopy ? (<Copy>{frontmatter.copy}</Copy>) : null}
       </figcaption>
     </GatsbyLink>
   </figure>

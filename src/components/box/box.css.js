@@ -3,27 +3,7 @@ import MEDIA from 'helpers/mediaTemplates';
 
 const containerMaxWidth = '700px';
 const containerFluidMaxWidth = '1170px';
-
-export const Container = styled.div`
-  padding: 2rem;
-  max-width: ${containerMaxWidth};
-  margin: 0 auto;
-`;
-
-export const ContainerFluid = styled.div`
-  padding: 2rem;
-  max-width: ${containerFluidMaxWidth};
-  margin: 0 auto;
-
-  p, h3 {
-    max-width: ${containerMaxWidth};
-  }
-`;
-
-export const ContainerFullwidth = styled.div`
-  padding: 2rem;
-  margin: 0 auto;
-  
+const imageOverrides = `
   h3 {
     max-width: ${containerMaxWidth};
   }
@@ -58,4 +38,29 @@ export const ContainerFullwidth = styled.div`
       }
     }
   }
+`;
+
+export const Container = styled.div`
+  padding: 2rem;
+  max-width: ${containerMaxWidth};
+  margin: 0 auto;
+`;
+
+export const ContainerFluid = styled.div`
+  padding: 2rem;
+  max-width: ${containerFluidMaxWidth};
+  margin: 0 auto;
+
+  ${imageOverrides}
+
+  p {
+    max-width: ${containerMaxWidth};
+  }
+`;
+
+export const ContainerFullwidth = styled.div`
+  padding: 2rem;
+  margin: 0 auto;
+  
+  ${imageOverrides}
 `;

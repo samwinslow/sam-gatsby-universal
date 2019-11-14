@@ -12,9 +12,8 @@ const Play = ({ data }) => (
   <Layout active="/play">
     <Box fluid>
       <Title as="h2">
-      Play (static-ish)
+      Play
       </Title>
-      <p>Go placidly amid the noise and haste, and remember what peace there may be in silence. As far as possible without surrender be on good terms with all persons. Speak your truth quietly and clearly; and listen to others, even the dull and the ignorant; they too have their story.</p>
       <Gallery data={data.allMdx} />
     </Box>
   </Layout>
@@ -26,13 +25,12 @@ Play.propTypes = {
 
 export default Play;
 
-// Note: resolve category in query
 export const query = graphql`
   query PlayQuery {
     allMdx(
       filter: {
         frontmatter: {
-          category: { eq: "" }
+          category: { eq: "play" }
         }
       }
       sort: {
