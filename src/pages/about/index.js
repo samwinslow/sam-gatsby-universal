@@ -91,6 +91,7 @@ const About = (/*{ data }*/) => (
       <p>
         <i>Here is what I’m <Link to="/blog/tools-and-productivity">reading about</Link> and <a href="https://twitter.com/sambwinslow">Tweeting about</a>.</i>
       </p>
+
       <hr />
 
       <h2 style={tempH2Style}>Work Experience <span role="img" aria-label="">👨‍💻</span></h2>
@@ -106,6 +107,12 @@ const About = (/*{ data }*/) => (
         <li style={tempLiStyle}><small>{moment(educationItems[0].dateStart).format('MMM YYYY')} – {educationItems[0].dateEnd? moment(educationItems[0].dateEnd).format('MMM YYYY') : 'Present'}</small><br /> <h4 style={tempH4Style}>{educationItems[0].companyName}</h4>{educationItems[0].jobTitle}</li>
         <li style={tempLiStyle}><small>{moment(educationItems[1].dateStart).format('MMM YYYY')} – {educationItems[1].dateEnd? moment(educationItems[1].dateEnd).format('MMM YYYY') : 'Present'}</small><br /> <h4 style={tempH4Style}>{educationItems[1].companyName}</h4>{educationItems[1].jobTitle}</li>
       </ul>
+
+      <hr />
+
+      <p>
+        <i>Headline typography is set in Tablet Gothic Wide, and body copy in Sirba. I built this site (without a template) using Gatsby.js, which runs on React for quick loadtimes.</i>
+      </p>
 
     </Box>
   </Layout>
