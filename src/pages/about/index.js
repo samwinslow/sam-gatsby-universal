@@ -9,7 +9,7 @@ import Modal from 'containers/modal';
 import Img from 'gatsby-image';
 import WorkplaceItems from 'components/workplace-items';
 import moment from 'moment';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 const workplaceItems = [
   {
@@ -80,9 +80,18 @@ const About = (/*{ data }*/) => (
   <Layout active="/about">
     <Box>
       <Title as="h2">
-      Me
+      About
       </Title>
-      <p>Go placidly amid the noise and haste, and remember what peace there may be in silence. As far as possible without surrender be on good terms with all persons. Speak your truth quietly and clearly; and listen to others, even the dull and the ignorant; they too have their story.</p>
+      <p>
+        I am a student at NYU, studying Media, Culture, and Communication. It is a liberal arts program, so I study communication and visual culture from both theoretical and practical perspectives. I am very interested in design principles and organizational structures.
+      </p>
+      <p>
+        In other words, I am just as interested in the design of a magazine spread, or a tech product, or an article of clothing as I am in the design of the organization that produced it. How does a team set up self-reflective practices that not only enable them to do great work, but also remain adaptable and aligned with business objectives over time?
+      </p>
+      <p>
+        <i>Here is what I’m <Link to="/blog/tools-and-productivity">reading about</Link> and <a href="https://twitter.com/sambwinslow">Tweeting about</a>.</i>
+      </p>
+      <hr />
 
       <h2 style={tempH2Style}>Work Experience <span role="img" aria-label="">👨‍💻</span></h2>
       <ul>
