@@ -4,7 +4,7 @@ import Item from 'components/gallery/item';
 import { Container } from './gallery.css';
 
 const Gallery = ({ data, showDate = true }) => {
-  const { edges: posts } = data.allMdx;
+  const posts = data.edges;
   return (
     <Container>
       {posts.map(({ node: post }) => (

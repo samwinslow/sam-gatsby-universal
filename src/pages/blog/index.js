@@ -14,7 +14,7 @@ const Blog = ({ data }) => (
       <Title as="h2">
       Blog
       </Title>
-      <Gallery data={data} />
+      <Gallery data={data.allMdx} />
     </Box>
   </Layout>
 );

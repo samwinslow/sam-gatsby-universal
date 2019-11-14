@@ -14,7 +14,7 @@ const Work = ({ data }) => (
       <Title as="h2">
       Work
       </Title>
-      <Gallery data={data} showDate={false} />
+      <Gallery data={data.allMdx} showDate={false} />
     </Box>
   </Layout>
 );
