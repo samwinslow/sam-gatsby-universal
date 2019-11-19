@@ -14,7 +14,10 @@ const BlogPost = ({ data }) => {
   const isFluid = 
     post.frontmatter.slug.startsWith('play');
   return (
-    <Layout>
+    <Layout
+      pageTitle={post.frontmatter.title}
+      siteDescription={post.frontmatter.copy}
+    >
       <Box fullwidth={isFullwidth} fluid={isFluid}>
         <Title as="h2" size="large">
           {post.frontmatter.title}
