@@ -14,7 +14,7 @@ const Layout = ({ data, children, active, siteUrl, siteDescription, pageTitle, i
       siteUrl="http://samwinslow.net/"
       siteDescription={siteDescription}
       pageTitle={pageTitle}
-      imageUrl={imageUrl}
+      imageUrl={"http://samwinslow.net" + imageUrl}
     />
     <Header title={data.site.siteMetadata.siteTitle} active={active} />
     {children}
