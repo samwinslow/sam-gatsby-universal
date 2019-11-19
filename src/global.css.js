@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { baseFontSize, baseFontStack, monoFontStack, accentColor, baseColor, baseLineHeight, headFontStack, baseFontURL } from './constants/theme';
+import { MEDIA } from 'helpers/mediaTemplates.js';
 
 export default createGlobalStyle`
   @import url(${baseFontURL});

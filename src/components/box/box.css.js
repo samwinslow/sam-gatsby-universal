@@ -41,13 +41,13 @@ const imageOverrides = `
 `;
 
 export const Container = styled.div`
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: ${containerMaxWidth};
   margin: 0 auto;
 `;
 
 export const ContainerFluid = styled.div`
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: ${containerFluidMaxWidth};
   margin: 0 auto;
 
@@ -59,7 +59,7 @@ export const ContainerFluid = styled.div`
 `;
 
 export const ContainerFullwidth = styled.div`
-  padding: 2rem;
+  padding: 1.5rem;
   margin: 0 auto;
   
   ${imageOverrides}
