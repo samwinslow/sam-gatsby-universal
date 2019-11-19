@@ -5,6 +5,16 @@ module.exports = {
     ...siteConfig,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-49904013-2",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 200,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
