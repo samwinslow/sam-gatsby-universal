@@ -11,7 +11,7 @@ export const Container = styled.header`
   a {
     text-decoration: none;
   }
-  ${MEDIA.PHONE`
+  ${MEDIA.TABLET`
     justify-content: center;
   `};
 `;

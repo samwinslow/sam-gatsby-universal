@@ -40,7 +40,7 @@ const Nav = ({ active }) => (
         <li key={link.to}>
           <Link
             to={link.to}
-            style={active == link.to ? activeLinkStyle : linkStyle}>
+            style={link.to == active ? activeLinkStyle : linkStyle}>
               {link.title}
           </Link>
         </li>

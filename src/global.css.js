@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { baseFontSize, baseFontStack, monoFontStack, accentColor, baseColor, baseLineHeight, headFontStack, baseFontURL } from './constants/theme';
-import { MEDIA } from 'helpers/mediaTemplates.js';
+import MEDIA from 'helpers/mediaTemplates';
 
 export default createGlobalStyle`
   @import url(${baseFontURL});
@@ -49,6 +49,10 @@ export default createGlobalStyle`
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
+
+    ${MEDIA.PHONE`
+      font-size: calc(${baseFontSize} * 0.8);
+    `};
   }
 
   h1, h2, h3, h4, h5, h6 {

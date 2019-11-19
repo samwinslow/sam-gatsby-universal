@@ -24,6 +24,8 @@ const SectionTitle = ({ children, as = 'h1', to = '/' }) => (
       color: baseColor,
       fontWeight: '400',
       fontSize: '1rem',
+      lineHeight: '1',
+      paddingTop: '1rem',
       textDecoration: 'none',
       display: 'block'
     }}>
