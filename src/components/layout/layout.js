@@ -6,7 +6,7 @@ import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 import Footer from '../footer/footer';
 
-const Layout = ({ data, children, active, siteUrl, siteDescription, pageTitle }) => (
+const Layout = ({ data, children, active, siteUrl, siteDescription, pageTitle, imageUrl }) => (
   <div>
     <GlobalStyle />
     <Head
@@ -14,6 +14,7 @@ const Layout = ({ data, children, active, siteUrl, siteDescription, pageTitle })
       siteUrl="http://samwinslow.net/"
       siteDescription={siteDescription}
       pageTitle={pageTitle}
+      imageUrl={imageUrl}
     />
     <Header title={data.site.siteMetadata.siteTitle} active={active} />
     {children}
@@ -27,7 +28,8 @@ Layout.propTypes = {
   active: PropTypes.string,
   siteUrl: PropTypes.string,
   siteDescription: PropTypes.string,
-  pageTitle: PropTypes.string
+  pageTitle: PropTypes.string,
+  imageUrl: PropTypes.string
 };
 
 const LayoutWithQuery = props => (

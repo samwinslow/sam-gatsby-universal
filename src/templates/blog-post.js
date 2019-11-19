@@ -17,6 +17,7 @@ const BlogPost = ({ data }) => {
     <Layout
       pageTitle={post.frontmatter.title}
       siteDescription={post.frontmatter.copy}
+      imageUrl={post.frontmatter.image.publicURL}
     >
       <Box fullwidth={isFullwidth} fluid={isFluid}>
         <Title as="h2" size="large">
@@ -42,6 +43,9 @@ export const query = graphql`
         date(formatString: "MMM. D, YYYY")
         title
         copy
+        image {
+          publicURL
+        }
       }
     }
   }
