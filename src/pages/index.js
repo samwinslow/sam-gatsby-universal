@@ -54,7 +54,7 @@ export const query = graphql`
         fields: [frontmatter___date]
         order: DESC
       }
-      limit: 6
+      limit: 5
     ) {
       edges {
         ...itemFields
