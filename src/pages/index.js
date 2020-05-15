@@ -11,6 +11,7 @@ import Img from 'gatsby-image';
 import Link from 'gatsby-link';
 import _ from 'underscore';
 import { graphql, StaticQuery } from 'gatsby';
+import Thumbnails from '../components/thumbnails/thumbnails';
 
 const tempImgStyleProps = { width: '300px', };
 const Index = ({ data }) => (
@@ -24,7 +25,7 @@ const Index = ({ data }) => (
       </Title>
 
       <SectionTitle as="h1" to="/blog">things I’ve written <span role="img" aria-label="">📝</span></SectionTitle>
-      <Gallery data={data.blogMdx} />
+      <Thumbnails data={data.blogMdx} />
 
       <SectionTitle as="h1" to="/work">things I’d put in a portfolio <span role="img" aria-label="">✨</span></SectionTitle>
       <Gallery data={data.workMdx} showDate={false} showCopy={false} />
