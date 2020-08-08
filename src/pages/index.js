@@ -24,13 +24,13 @@ const Index = ({ data }) => (
         and I make things happen.<br />
       </Title>
 
-      <SectionTitle as="h1" to="/blog">things I’ve written <span role="img" aria-label="">📝</span></SectionTitle>
+      <SectionTitle as="h1" to="/blog">writing <span role="img" aria-label="">📝</span></SectionTitle>
       <Thumbnails data={data.blogMdx} />
 
-      <SectionTitle as="h1" to="/work">things I’d put in a portfolio <span role="img" aria-label="">✨</span></SectionTitle>
+      <SectionTitle as="h1" to="/work">design <span role="img" aria-label="">✨</span></SectionTitle>
       <Gallery data={data.workMdx} showDate={false} showCopy={false} />
 
-      <SectionTitle as="h1" to="/play">things I make when I’m bored <span role="img" aria-label="">🌴</span></SectionTitle>
+      <SectionTitle as="h1" to="/play">just for fun <span role="img" aria-label="">🌴</span></SectionTitle>
       <Gallery data={data.playMdx} showDate={false} showCopy={false} />
     </Box>
   </Layout>

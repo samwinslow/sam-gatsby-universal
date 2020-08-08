@@ -8,29 +8,29 @@ import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
 
-const Work = ({ data }) => (
-  <Layout active="/work">
+const Code = ({ data }) => (
+  <Layout active="/code">
     <Box fluid>
       <Title as="h2">
-      Design &amp; Creative Work
+      Code
       </Title>
       <Gallery data={data.allMdx} showDate={false} />
     </Box>
   </Layout>
 );
 
-Work.propTypes = {
+Code.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default Work;
+export default Code;
 
 export const query = graphql`
-  query WorkQuery {
+  query CodeQuery {
     allMdx(
       filter: {
         frontmatter: {
-          category: { eq: "work" }
+          category: { eq: "code" }
         }
       }
       sort: {

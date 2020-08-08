@@ -1,6 +1,7 @@
 export const baseColor = '#222';
 export const mutedColor = 'rgba(0,0,0,0.5)';
 export const accentColor = '#1ea899';
+export const secondaryAccentColor = '#a81e2d';
 
 export const baseFontSize = '20px';
 export const baseLineHeight = '1.8';

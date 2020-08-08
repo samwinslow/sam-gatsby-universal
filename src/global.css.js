@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { baseFontSize, baseFontStack, monoFontStack, accentColor, baseColor, baseLineHeight, headFontStack, baseFontURL } from './constants/theme';
+import { baseFontSize, baseFontStack, monoFontStack, accentColor, baseColor, baseLineHeight, headFontStack, baseFontURL, secondaryAccentColor } from './constants/theme';
 import MEDIA from 'helpers/mediaTemplates';
 
 export default createGlobalStyle`
@@ -23,6 +23,14 @@ export default createGlobalStyle`
     border: 0;
     font-family: inherit;
     vertical-align: baseline;
+  }
+
+  code {
+    font-family: "Menlo", "Monaco", "Consolas", "Courier New", "Courier", monospace;
+    font-size: 90%;
+    color: ${secondaryAccentColor};
+    padding: 0 0.3em;
+    /* background-color: rgba(0,0,0,0.1); */
   }
 
   /* HTML5 display-role reset for older browsers */
