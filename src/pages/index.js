@@ -12,17 +12,27 @@ import Link from 'gatsby-link';
 import _ from 'underscore';
 import { graphql, StaticQuery } from 'gatsby';
 import Thumbnails from '../components/thumbnails/thumbnails';
+import ReactRotatingText from 'react-rotating-text';
 
 const tempImgStyleProps = { width: '300px', };
 const Index = ({ data }) => (
   <Layout>
     <Box fluid>
-      <Img fluid={data.profileImage.childImageSharp.fluid} style={tempImgStyleProps} />
-      <Title as="h1" leader={true}>
-        I have lots of ideas,<br />
-        I send well-written emails,<br />
-        and I make things happen.<br />
-      </Title>
+      <Link rel="/about" style={{
+        textDecoration: 'none'
+      }}>
+        <Img fluid={data.profileImage.childImageSharp.fluid} style={tempImgStyleProps} />
+        <Title as="h1" leader={true}>
+          I am a <br />
+          <ReactRotatingText items={[
+            'founder',
+            'designer',
+            'technologist',
+            'student',
+            'doer',
+          ]} />
+        </Title>
+      </Link>
 
       <SectionTitle as="h1" to="/blog">writing <span role="img" aria-label="">📝</span></SectionTitle>
       <Thumbnails data={data.blogMdx} />

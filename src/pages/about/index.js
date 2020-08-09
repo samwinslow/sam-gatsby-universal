@@ -14,17 +14,17 @@ import { graphql, Link } from 'gatsby';
 const workplaceItems = [
   {
     id: 0,
-    companyName: 'Baedeker Travel Magazine (NYU)',
-    companyURL: 'http://nyubaedeker.com/',
-    jobTitle: 'Editor-in-Chief & Creative Director',
-    dateStart: '2017-09-01',
-    dateEnd: '',
+    companyName: 'Tunestack',
+    companyURL: '',
+    jobTitle: 'Founder & CEO',
+    dateStart: '2020-01-01',
+    dateEnd: '2020-09-01',
   },
   {
     id: 1,
     companyName: 'Showcase Jobs',
     companyURL: '',
-    jobTitle: 'Marketing & Communications Lead',
+    jobTitle: 'Head of Growth',
     dateStart: '2019-04-29',
     dateEnd: '2019-10-30',
   },
@@ -83,13 +83,13 @@ const About = (/*{ data }*/) => (
       About
       </Title>
       <p>
-        I am a student at NYU, studying Media, Culture, and Communication. It is a liberal arts program, so I study communication and visual culture from both theoretical and practical perspectives. I am very interested in design principles and organizational structures.
+        I am a student at NYU, studying Media, Culture, and Communication with a concentration in Technology and Social Processes. It is a liberal arts program, so I study the cultural impact of technology from a theoretical perspective.
       </p>
       <p>
-        In other words, I am just as interested in the design of a magazine spread, or a tech product, or an article of clothing as I am in the design of the organization that produced it. How does a team set up self-reflective practices that not only enable them to do great work, but also remain adaptable and aligned with business objectives over time?
+        I learn by doing, and I get the most satisfaction out of building systems — whether it’s a visual language, as in my design projects, or the tech stack of a mobile app, as with Tunestack. <a href="/code/no-degree">I do not have a CS degree</a>.
       </p>
       <p>
-        <i>Here is what I’m <Link to="/blog/tools-and-productivity">reading about</Link> and <a href="https://twitter.com/sambwinslow">Tweeting about</a>.</i>
+        Get in touch on <a href="https://twitter.com/sambwinslow">Twitter</a>.
       </p>
 
       <hr />
@@ -111,7 +111,7 @@ const About = (/*{ data }*/) => (
       <hr />
 
       <p>
-        <i>Headline typography is set in Tablet Gothic Wide, and body copy in Sirba. I built this site (without a template) using Gatsby.js, which runs on React for quick loadtimes.</i>
+        <i>Headline typography is set in Tablet Gothic Wide, and body copy in Sirba. I built this site using Gatsby.js, which runs on React.</i>
       </p>
 
     </Box>
