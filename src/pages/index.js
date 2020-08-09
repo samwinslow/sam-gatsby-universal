@@ -30,6 +30,9 @@ const Index = ({ data }) => (
       <SectionTitle as="h1" to="/work">design <span role="img" aria-label="">✨</span></SectionTitle>
       <Gallery data={data.workMdx} showDate={false} showCopy={false} />
 
+      <SectionTitle as="h1" to="/code">code <span role="img" aria-label="">👨‍💻</span></SectionTitle>
+      <Gallery data={data.codeMdx} showDate={false} showCopy={false} />
+
       <SectionTitle as="h1" to="/play">just for fun <span role="img" aria-label="">🌴</span></SectionTitle>
       <Gallery data={data.playMdx} showDate={false} showCopy={false} />
     </Box>
@@ -54,7 +57,7 @@ export const query = graphql`
         fields: [frontmatter___date]
         order: DESC
       }
-      limit: 5
+      limit: 3
     ) {
       edges {
         ...itemFields
@@ -70,7 +73,23 @@ export const query = graphql`
         fields: [frontmatter___date]
         order: DESC
       }
-      limit: 6
+      limit: 3
+    ) {
+      edges {
+        ...itemFields
+      }
+    }
+    codeMdx: allMdx(
+      filter: {
+        frontmatter: {
+          category: { eq: "code" }
+        }
+      }
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
+      }
+      limit: 3
     ) {
       edges {
         ...itemFields
@@ -86,7 +105,7 @@ export const query = graphql`
         fields: [frontmatter___date]
         order: DESC
       }
-      limit: 6
+      limit: 3
     ) {
       edges {
         ...itemFields

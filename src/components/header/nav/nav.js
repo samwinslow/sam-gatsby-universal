@@ -16,16 +16,16 @@ const activeLinkStyle = {
 
 const links = [
   {
-    to: '/work',
-    title: 'Work',
-  },
-  {
     to: '/blog',
-    title: 'Blog',
+    title: 'Writing',
   },
   {
-    to: '/about',
-    title: 'About',
+    to: '/work',
+    title: 'Design',
+  },
+  {
+    to: '/code',
+    title: 'Code',
   },
   {
     to: '/play',

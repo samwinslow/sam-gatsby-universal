@@ -12,7 +12,7 @@ const Work = ({ data }) => (
   <Layout active="/work">
     <Box fluid>
       <Title as="h2">
-      Design &amp; Creative Work
+      Design
       </Title>
       <Gallery data={data.allMdx} showDate={false} />
     </Box>
