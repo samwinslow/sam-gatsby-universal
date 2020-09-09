@@ -28,6 +28,11 @@ const Social = () => (
           <FontAwesomeIcon icon={faInstagram} />
         </a>
       </li>
+      <li>
+        <a href="http://github.com/samwinslow/" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+      </li>
     </ul>
   </Container>
 );
