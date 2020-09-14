@@ -5,6 +5,7 @@ import Head from 'components/head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 import Footer from '../footer/footer';
+import styled from 'styled-components';
 
 const Layout = ({ data, children, active, siteUrl, siteDescription, pageTitle, imageUrl }) => (
   <div>
@@ -17,7 +18,9 @@ const Layout = ({ data, children, active, siteUrl, siteDescription, pageTitle, i
       imageUrl={"http://samwinslow.net" + imageUrl}
     />
     <Header title={data.site.siteMetadata.siteTitle} active={active} />
-    {children}
+    <Container>
+      {children}
+    </Container>
     <Footer />
   </div>
 );
@@ -51,5 +54,9 @@ LayoutWithQuery.propTypes = {
   children: PropTypes.node.isRequired,
   active: PropTypes.string,
 };
+
+const Container = styled.div`
+  padding-top: 6rem;
+`
 
 export default LayoutWithQuery;

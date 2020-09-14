@@ -6,6 +6,6 @@ export const Text = styled.span`
   font-family: ${headFontStack};
   font-size: 1rem;
   letter-spacing: 0.01rem;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 `;
